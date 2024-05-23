@@ -1,0 +1,11 @@
+<section class="to-quote">
+<h1 class="to-quote__title">Libros Disponibles para Cotizar:</h1>
+<ul class="to-quote__list">
+  @for(reading of readings; track reading.id) {
+    <app-reading-element [reading]="reading" (infoEnviada)="recibirInfo($event)"></app-reading-element>
+  }
+</ul>
+<button class="to-quote__send" (click)="sendToQuote()">Cotizar libros seleccionados</button>
+<!-- <app-modal-block [showModal]="showModal" (closeModal)="closeModal()" [quotes]="quotes"></app-modal-block> -->
+</section>
+

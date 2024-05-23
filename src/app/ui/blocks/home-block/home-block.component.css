@@ -1,0 +1,54 @@
+.to-quote {
+  background: linear-gradient( #f3e6d2, #f3d5a4);
+  height:calc(100vh - 68.4px) ;
+  max-width: 1110px;
+  margin: auto;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+}
+.to-quote__title {
+  font-size: calc(1rem + 1vw);
+  margin: 0;
+  color: black;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+  text-align: center;
+}
+.to-quote__list{
+  overflow: auto;
+  background: linear-gradient( #f3dbb3, #f3e9d8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.to-quote__list::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 2px;
+}
+
+.to-quote__list::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+.to-quote__send{
+  border: 1px solid gray;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: black;
+  margin-left: 0.75em;
+  margin: auto;
+  margin-top: 0.75rem;
+}
+
+.to-quote__send:hover{
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,16 @@
+<li class="tarjeta" (change)="checkedUnchecked($event)">
+
+  <h2>{{reading.title}}</h2>
+  <p>{{reading.author}}</p>
+  <p> Tipo : {{reading.type}}</p>
+  <p> Precio Original : ${{reading.originalPrice}}</p>
+  <label for="">
+    <input type="checkbox" name="check">
+    Seleccionar
+  </label>
+
+  <label>
+    <input type="number" [disabled]=disabled name="amount" id="amount" [defaultValue]="1">
+    Cantidad
+  </label>
+</li>

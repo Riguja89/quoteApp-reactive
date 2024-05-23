@@ -1,0 +1,34 @@
+.tarjeta {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  flex: 1 0 calc(33.33% - 10px); /* Calcula el ancho de cada columna */
+  margin: 5px; /* Espacio entre los elementos */
+
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+input[type="checkbox"] {
+  margin-inline: 4px;
+  transform: scale(1.5);
+  margin-block: 0.5rem;
+}
+
+input[type="number"] {
+  width: 50px;
+  margin-left: 20px;
+}
