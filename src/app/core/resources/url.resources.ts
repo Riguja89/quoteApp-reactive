@@ -6,6 +6,7 @@ export const URL_RESOURCES = {
   login: `${environment.apiUrlAuth}/authenticate`,
   register: `${environment.apiUrlAuth}/register`,
   reading:`${environment.apiUrlReading}`,
+  response:`${environment.apiUrlResponse}`,
   registReading:`${environment.apiUrlQuotes}/calculateIndividualQuote`,
   calculateQuote:`${environment.apiUrlQuotes}/CalculateMultipleQuote`,
   calculateOptima:`${environment.apiUrlQuotes}/CalculateOptimalQuote`,

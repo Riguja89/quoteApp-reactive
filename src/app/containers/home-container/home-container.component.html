@@ -1,3 +1,9 @@
 <!-- <app-header-block (infoEnviada)="recibirInfo($event)"></app-header-block> -->
-<app-home-block [readings]="readings$ | async" (infoEnviada)="recibirReadingsToQuote($event)"></app-home-block>
+<app-home-block [readings]="readings$ | async"
+(infoEnviada)="recibirReadingsToQuote($event)"
+></app-home-block>
+
+<app-side-group-block [group]="group$ | async"
+(sendGroups)="sendGroup($event)"
+></app-side-group-block>
 

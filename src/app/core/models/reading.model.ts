@@ -1,21 +1,21 @@
 export interface IReading {
-  id: number;
+  id: string;
   title: string;
   author: string;
   originalPrice: number;
   type: string;
 }
 export interface IReadingChecked {
-  id: number;
+  id: string;
   checked: boolean;
   amount: number;
 }
 
 export interface IReadingToQuote {
-  listReadingToQuoteDTO: [{ id: number; amount: number }];
+  listReadingToQuoteDTO: [{ id: string; amount: number }];
 }
 
 export interface IReadingToQuoteOptimo {
-  lectures: [{ id: number; amount: number }];
+  lectures: [{ id: string; amount: number }];
   budget:number;
 }

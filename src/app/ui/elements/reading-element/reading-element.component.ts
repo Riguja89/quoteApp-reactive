@@ -13,7 +13,7 @@ export class ReadingElementComponent {
   @Input() reading: IReading;
   @Output() infoEnviada = new EventEmitter<IReadingChecked>();
   public disabled: boolean = true;
-  public readinChecked: IReadingChecked = { id: 0, checked: false, amount: 1 };
+  public readinChecked: IReadingChecked = { id: '0', checked: false, amount: 1 };
 
   checkedUnchecked(event: Event) {
     const target = event.target as HTMLInputElement;

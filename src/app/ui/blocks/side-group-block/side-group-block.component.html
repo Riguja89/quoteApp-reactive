@@ -1,0 +1,18 @@
+<section class="group-section">
+  <h1>Grupos para cotizar</h1>
+    <p>Clint Id: {{group.clientId}}</p>
+    <ul>
+      @for (resume of group.groupTuplesReadingLists; track $index) {
+        <h2>grupo: {{$index}}</h2>
+        <ul>
+          @for (item of resume.readingAmountList; track $index) {
+            <p>Libro id: {{item.readingId}}</p>
+            <p>Cantida: {{item.amount}}</p>
+          }
+        </ul>
+      }
+    </ul>
+  <button class="to-quote__send" (click)="sendGroup(group)">Cotizar grupos</button>
+<!-- <app-modal-block [showModal]="showModal" (closeModal)="closeModal()" [quotes]="quotes"></app-modal-block> -->
+
+</section>
