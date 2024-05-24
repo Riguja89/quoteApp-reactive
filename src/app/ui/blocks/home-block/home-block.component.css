@@ -1,7 +1,7 @@
 .to-quote {
   background: linear-gradient( #f3e6d2, #f3d5a4);
   height:calc(100vh - 68.4px) ;
-  max-width: 1110px;
+ width: 70vw;
   margin: auto;
   padding-block: 1rem;
   display: flex;

@@ -1,14 +1,18 @@
 <section class="group-section">
-  <h1>Grupos para cotizar</h1>
-    <p>Clint Id: {{group.clientId}}</p>
-    <input type="text" (input)="sendClientId($event)" >
+  <h1 class="group-section__title">Grupos para cotizar</h1>
+  <label for="">Clint Id: </label>
+    <p >{{group.clientId}}</p>
+    <input class="clientId-input" type="text" (input)="sendClientId($event)" >
     <ul>
       @for (resume of group.groupTuplesReadingLists; track $index) {
-        <h2>grupo: {{$index}}</h2>
+        <h3>grupo: {{$index+1}}</h3>
         <ul>
           @for (item of resume.readingAmountList; track $index) {
-            <p>Libro id: {{item.readingId}}</p>
+            <article class="group-section__item">
+            <label for="">Libro id:  </label>
+            <p>{{item.readingId}}</p>
             <p>Cantida: {{item.amount}}</p>
+          </article>
           }
         </ul>
       }

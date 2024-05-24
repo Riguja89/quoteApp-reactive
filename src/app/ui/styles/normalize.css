@@ -353,3 +353,21 @@ template {
 [hidden] {
   display: none;
 }
+
+.wrapper-home {
+  display: flex;
+  height: calc(100vh - 68px);
+}
+
+.content {
+  flex: 1;
+}
+
+.sidebar {
+  width: 30vw;
+  height: calc(100%);
+  top: 0;
+  right: 0; /* Cambiado de left a right */
+  background-color: #cfc5ba;
+  overflow-x: hidden;
+}

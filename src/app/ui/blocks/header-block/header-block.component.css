@@ -2,7 +2,7 @@
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  max-width: 1110px;
+  width: 100%;
   margin: 0 auto;
   background-color: #212529;
 }

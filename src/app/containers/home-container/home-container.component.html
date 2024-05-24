@@ -1,11 +1,19 @@
  <app-header-block (infoEnviada)="recibirInfo($event)"></app-header-block>
-<app-home-block [readings]="readings$ | async"
-(infoEnviada)="recibirReadingsToQuote($event)"
-></app-home-block>
+ <section class="wrapper-home">
+  <div class="content">
+    <app-home-block
+      [readings]="readings$ | async"
+      (infoEnviada)="recibirReadingsToQuote($event)">
+    </app-home-block>
+  </div>
+  <div class="sidebar">
+  <app-side-group-block
+    [group]="group$ | async"
+    (sendGroups)="sendGroup($event)"
+    (sendClient)="sendClientId($event)"
+    [results]="resutls$ | async">
+  </app-side-group-block>
+</div>
+</section>
 
-<app-side-group-block [group]="group$ | async"
-(sendGroups)="sendGroup($event)"
-(sendClient)="sendClientId($event)"
-[results]="resutls$ | async"
-></app-side-group-block>
 
