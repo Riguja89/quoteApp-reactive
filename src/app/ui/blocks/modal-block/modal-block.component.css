@@ -28,6 +28,27 @@
     margin-bottom: 5px;
     padding-inline: 10px;
   }
+  h3{
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+    padding-inline: 10px;
+  }
+  h4{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    padding-inline: 10px;
+  }
+}
+.modal-group{
+  background-color: #a7a5a53b;
+  border-radius: 5px;
+  margin-block: 8px;
+  padding: 5px;
+}
+.modal-item{
+  background-color: #88888848;
+  margin-block: 10px;
+  border-radius: 5px;
 }
 .modal-content::-webkit-scrollbar{
   width: 5px;
