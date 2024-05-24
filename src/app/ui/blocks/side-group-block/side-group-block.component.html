@@ -1,6 +1,7 @@
 <section class="group-section">
   <h1>Grupos para cotizar</h1>
     <p>Clint Id: {{group.clientId}}</p>
+    <input type="text" (input)="sendClientId($event)" >
     <ul>
       @for (resume of group.groupTuplesReadingLists; track $index) {
         <h2>grupo: {{$index}}</h2>
@@ -13,6 +14,6 @@
       }
     </ul>
   <button class="to-quote__send" (click)="sendGroup(group)">Cotizar grupos</button>
-<!-- <app-modal-block [showModal]="showModal" (closeModal)="closeModal()" [quotes]="quotes"></app-modal-block> -->
+<app-modal-block [showModal]="showModal" (closeModal)="closeModal()" [results]="results"></app-modal-block>
 
 </section>

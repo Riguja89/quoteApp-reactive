@@ -5,5 +5,7 @@
 
 <app-side-group-block [group]="group$ | async"
 (sendGroups)="sendGroup($event)"
+(sendClient)="sendClientId($event)"
+[results]="resutls$ | async"
 ></app-side-group-block>
 

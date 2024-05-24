@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 //import { IMultipleQuote } from '../../core/models/quotes.model';
 import { AppState } from '../../core/store/store';
 import { Store } from '@ngrx/store';
-import { selectReadings } from '../../core/store/selectors/quote.selector';
+import { selectReadings, selectResponses } from '../../core/store/selectors/quote.selector';
 import * as QuoteActions from '../../core/store/actions/quote.actions';
 import * as GroupActions from '../../core/store/actions/group.actions';
 import * as ResponseActions from '../../core/store/actions/response.actions';
@@ -21,6 +21,7 @@ import {
   IgrupeReadings,
 } from '../../core/models/group.model';
 import { selectGroup } from '../../core/store/selectors/quote.selector';
+import { IgroupQuote } from '../../core/models/quote.model';
 
 @Injectable({
   providedIn: 'root',
@@ -41,6 +42,10 @@ export class HomeContainerFacade {
 
   group$(): Observable<Igroup>{
    return this.store.select(selectGroup);
+  }
+
+  results$(): Observable<IgroupQuote>{
+    return this.store.select(selectResponses)
   }
 
   // isLoading$(): Observable<boolean> {
@@ -68,6 +73,10 @@ export class HomeContainerFacade {
 
   sendGroups(group :Igroup){
     this.store.dispatch(ResponseActions.loadResponses({group}));
+  }
+
+  setClientId(clientId: string){
+    this.store.dispatch(GroupActions.setClientId({clientId}))
   }
 
   addReadingsToGroup(readingsToQuote: IReadingToQuote): void {

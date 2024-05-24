@@ -1,0 +1,31 @@
+@if (showModal) {
+<dialog class="modal">
+  <section class="modal-content">
+    @if (results) {
+    <h1>Cotizacion Solicitada:</h1>
+    <p>Cliente: {{results.nameClien}}</p>
+    <p>Gran Total: ${{results.totalGroup}}</p>
+    <p>Descuento Total: ${{results.discountGroup}}</p>
+    @for (resume of results.resumeList; track $index) {
+    <h2>Grupo: {{$index + 1}}</h2>
+    <p>Cliente: {{resume.nameClient}}</p>
+    <p>Fecha Inicio CLiente: {{resume.startDate}}</p>
+    <p>Tipo de cotizacion: {{resume.quoteType}}</p>
+    <p>Descuento: {{resume.discount}}</p>
+    <p>Total: {{resume.total}}</p>
+    @for (item of resume.itemList; track $index) {
+    <h2>Libro {{$index+1}}</h2>
+    <h3>{{item.title}}</h3>
+    <p>Autor: {{item.author}}</p>
+    <p>Tipo: {{item.type}}</p>
+    <p>Precion Original: {{item.originalPrice}}</p>
+    <p>Descuento: {{item.discount}}</p>
+    <p>Precio Final: {{item.finalPrice}}</p>
+    <p>Cantidad: {{item.amount}}</p>
+    }
+    }
+    }
+    <button class="modal-content__close" (click)="closeModal2()">Cerrar</button>
+  </section>
+</dialog>
+}

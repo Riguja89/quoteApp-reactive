@@ -6,6 +6,7 @@ import { IReading, IReadingToQuote } from '../../core/models/reading.model';
 import { Observable } from 'rxjs';
 import { SideGroupBlockComponent } from '../../ui/blocks/side-group-block/side-group-block.component';
 import { Igroup } from '../../core/models/group.model';
+import { IgroupQuote } from '../../core/models/quote.model';
 //import { HeaderBlockComponent } from '../../ui/blocks/header-block/header-block.component';
 //import { IMultipleQuote } from '../../core/models/quotes.model';
 
@@ -18,6 +19,7 @@ import { Igroup } from '../../core/models/group.model';
 export class HomeContainerComponent implements OnInit, OnDestroy {
   public readings$: Observable<IReading[]>;
   public group$: Observable<Igroup>;
+  public resutls$: Observable<IgroupQuote>;
   //public multipleQuote$: Observable<IMultipleQuote>
   constructor (
     private readonly facade: HomeContainerFacade,
@@ -38,6 +40,7 @@ export class HomeContainerComponent implements OnInit, OnDestroy {
   private initializeSubscriptions(): void {
     this.readings$ = this.facade.readings$();
     this.group$ = this.facade.group$();
+    this.resutls$ = this.facade.results$();
   //  this.multipleQuote$=this.facade.multiplesQuotes$();
   }
 
@@ -49,6 +52,9 @@ export class HomeContainerComponent implements OnInit, OnDestroy {
     console.log(group)
     this.facade.sendGroups(group)
 
+  }
+  sendClientId(clientId: string){
+    this.facade.setClientId(clientId);
   }
 
   recibirReadingsToQuote(readingsToQuote:IReadingToQuote){

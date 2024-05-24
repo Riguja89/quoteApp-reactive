@@ -20,7 +20,16 @@ export const groupReducer = createReducer(
     ...state,
     group: action.group,
   })),
-  //on(GroupActions.addReadingsToGroup, (state, action) =>({...state, group:action.lisItems})),
+
+  on(GroupActions.setClientId, (state, {clientId}) =>{
+    return{
+      ...state,
+      group: {
+        ...state.group,
+        clientId:clientId
+      }
+    }
+  }),
 
   on(GroupActions.addReadingsToGroup, (state, { lisItems }) => {
     return {

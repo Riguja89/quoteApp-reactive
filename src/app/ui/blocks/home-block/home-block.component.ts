@@ -46,18 +46,7 @@ export class HomeBlockComponent {
         ? toQuote.listReadingToQuoteDTO.push({ id: item.id, amount: item.amount })
         : null
     );
-    console.log(toQuote);
     this.infoEnviada.emit(toQuote);
-    this.showModal = true;
   }
 
-
-
-  openModal(): void {
-    this.showModal = true;
-  }
-
-  closeModal(): void {
-    this.showModal = false;
-  }
 }
