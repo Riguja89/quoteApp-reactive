@@ -1,0 +1,32 @@
+<header class="header">
+  <nav class="header__nav" #headerNav>
+
+    <a href="/" class="brand-logo">
+      <img src="assets/penguin-svgrepo-com.svg" alt="Logo" class="logo">
+    </a>
+
+      <ul class="header__options-menu">
+        <li><button (click)="navigate('/admin/home')">Home</button></li>
+      </ul>
+      <li (click)="logOut()" class="header__options-logout">
+        <a href="" class="brand-logo">
+          <img src="assets/refresh-square-svgrepo-com.svg" alt="Logo" class="logo">
+        </a>
+      </li>
+
+  </nav>
+  <svg #openButton (click)="toggleNavVisibleEvent()" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2 header__open">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M4 6l16 0" />
+    <path d="M4 12l16 0" />
+    <path d="M4 18l16 0" />
+  </svg>
+  <svg #closeButton (click)="toggleNavVisibleEvent()" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-caret-up header__close">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M18 14l-6 -6l-6 6h12" />
+  </svg>
+</header>

@@ -7,13 +7,14 @@ import { Observable } from 'rxjs';
 import { SideGroupBlockComponent } from '../../ui/blocks/side-group-block/side-group-block.component';
 import { Igroup } from '../../core/models/group.model';
 import { IgroupQuote } from '../../core/models/quote.model';
+import { HeaderBlockComponent } from '../../ui/blocks/header-block/header-block.component';
 //import { HeaderBlockComponent } from '../../ui/blocks/header-block/header-block.component';
 //import { IMultipleQuote } from '../../core/models/quotes.model';
 
 @Component({
   selector: 'app-home-container',
   standalone: true,
-  imports: [HomeBlockComponent, SideGroupBlockComponent, AsyncPipe],
+  imports: [HomeBlockComponent, SideGroupBlockComponent, HeaderBlockComponent, AsyncPipe],
   templateUrl: './home-container.component.html'
 })
 export class HomeContainerComponent implements OnInit, OnDestroy {
